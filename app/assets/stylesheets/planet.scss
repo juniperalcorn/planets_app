@@ -5,24 +5,10 @@
 
 $font-stack: 'Gugi', cursive;
 
-body {
-    margin: 0 18% 10% 18%;
-    font: 1em $font-stack;
-    background-image: linear-gradient(to left bottom, #9a9c9e, #878a8c, #74797b, #61686a, #4f5759);
-    background-repeat: no-repeat;
-    height: auto;
-
-}
-h1 {
-    font: 6em $font-stack;
-    color: darkblue;
-}
 #planetName {
     color: darkblue;
 }
-td {
-    padding: .5em;
-}
+
 #orbitPeriod{
     margin-bottom: 350px;
 }

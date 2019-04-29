@@ -3,4 +3,7 @@
 <p>Distance from the sun: <%= @planet.distance_from_sun %></p>
 <p>Diameter: <%= @planet.diameter%></p>
 <p>Orbit period: <%= @planet.orbit_period %></p>
+
+<%= link_to 'Moons', "/planet/#{@planet.id}/moon"%>
+
 <p id='orbitPeriod'><%= link_to 'Back', planet_index_path %></p>

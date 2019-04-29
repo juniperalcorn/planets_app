@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+ @import url('https://fonts.googleapis.com/css?family=Gugi');
+ 
+ body {
+     margin: 0 18%;
+     font-family: 'Gugi', cursive;
+     font-size: 1em;
+     background-image: linear-gradient(to left bottom, #9a9c9e, #878a8c, #74797b, #61686a, #4f5759);
+     background-repeat: no-repeat;
+     height: 100vh;
+ }
+ h1 {
+     font-size: 5em;
+     font-family: 'Gugi', cursive;
+     color: darkblue;
+ }
+ td {
+     padding: .5em;
+ }

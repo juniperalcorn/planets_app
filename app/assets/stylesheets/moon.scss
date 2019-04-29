@@ -5,22 +5,15 @@
 
 $font-stack: 'Gugi', cursive;
 
-body {
-    margin: 0 18%;
-    font: 1em $font-stack;
-    background-image: linear-gradient(to left bottom, #9a9c9e, #878a8c, #74797b, #61686a, #4f5759);
-    background-repeat: no-repeat;
-    height: 100% !important;
-}
-h1 {
-    font: 6em $font-stack;
-    color: darkblue;
-}
+// body {
+//     margin: 0 18%;
+//     font: 1em $font-stack;
+//     background-image: linear-gradient(to left bottom, #9a9c9e, #878a8c, #74797b, #61686a, #4f5759);
+//     background-repeat: no-repeat;
+//     // height: 100% !important;
+// }
 #moonToPlanet {
     color: darkblue;
-}
-td {
-    padding: .5em;
 }
 #moonName {
     color: darkblue;

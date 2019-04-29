@@ -4,6 +4,7 @@ class PlanetController < ApplicationController
     end
     def show
         @planet = Planet.find(params[:id])
+        @moon = @planet.moons.all
     end
 
 end

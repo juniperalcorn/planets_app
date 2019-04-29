@@ -124,6 +124,7 @@ moons.each do |key, value|
     distance_from_planet: value[:distance_from_planet],
     radius: value[:radius],
     orbit_period: value[:orbit_period],
-    planet: value[:planet]
+    # planet: value[:planet],
+    planet_id: planet.id
   })
 end

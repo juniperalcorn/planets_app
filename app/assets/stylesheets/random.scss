@@ -1,22 +1,4 @@
 // Place all the styles related to the Random controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import url('https://fonts.googleapis.com/css?family=Gugi');
 
-$font-stack: 'Gugi', cursive;
-
-body {
-    margin: 0 18%;
-    font: 1em $font-stack;
-    background-image: linear-gradient(to left bottom, #9a9c9e, #878a8c, #74797b, #61686a, #4f5759);
-    background-repeat: no-repeat;
-    height: 100vh;
-}
-h1 {
-    font: 5em $font-stack;
-    color: darkblue;
-}
-
-td {
-    padding: .5em;
-}
