@@ -10,7 +10,6 @@ body {
     font: 1em $font-stack;
     background-image: linear-gradient(to left bottom, #9a9c9e, #878a8c, #74797b, #61686a, #4f5759);
     background-repeat: no-repeat;
-    width: 100%;
     height: auto;
 }
 h1 {
@@ -25,4 +24,7 @@ td {
 }
 #orbitPeriod{
     margin-bottom: 350px;
+}
+#linkToMoons {
+    margin: 10% 0 10% 45%;
 }

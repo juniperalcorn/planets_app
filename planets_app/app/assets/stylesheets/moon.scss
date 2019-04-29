@@ -10,7 +10,7 @@ body {
     font: 1em $font-stack;
     background-image: linear-gradient(to left bottom, #9a9c9e, #878a8c, #74797b, #61686a, #4f5759);
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 100% !important;
 }
 h1 {
     font: 6em $font-stack;
@@ -24,4 +24,10 @@ td {
 }
 #moonName {
     color: darkblue;
+}
+#moonLink {
+    margin-bottom: 350px;
+}
+#linkToPlanet {
+    margin: 10% 0 10% 45%;
 }

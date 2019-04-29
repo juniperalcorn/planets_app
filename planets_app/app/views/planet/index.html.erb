@@ -2,10 +2,12 @@
 <table>
     <% @planets.each do |planet| %>
         <tr>
-            <td id ='planetName'><%= planet.name %></td>
-            <td><%= planet.distance_from_sun %></td>
-            <td><%= planet.diameter%></td>
-            <td><%= planet.orbit_period %></td>
+            <td id ='planetName'><%= link_to planet.name, planet_path(planet) %></td>
+            <td>Distance from the sun: <%= planet.distance_from_sun %></td>
+            <td>Diameter: <%= planet.diameter%></td>
+            <td>Orbit period: <%= planet.orbit_period %></td>
+            
         </tr>
     <% end %>
 </table>
+<p id='linkToMoons'><%= link_to 'Moons', moon_index_path%></p>
