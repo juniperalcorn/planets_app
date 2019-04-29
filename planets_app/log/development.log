@@ -763,3 +763,763 @@ Processing by MoonController#show as HTML
 Completed 200 OK in 63ms (Views: 56.9ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/planet/1" for ::1 at 2019-04-29 10:46:15 -0400
+Processing by PlanetController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planet_controller.rb:6
+  Rendering planet/show.html.erb within layouts/application
+  Rendered planet/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 15.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/planet" for ::1 at 2019-04-29 10:47:49 -0400
+Processing by PlanetController#index as HTML
+  Rendering planet/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planet/index.html.erb:3
+  Rendered planet/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 83ms (Views: 77.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/planet/random" for ::1 at 2019-04-29 10:49:27 -0400
+Processing by PlanetController#show as HTML
+  Parameters: {"id"=>"random"}
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/planet_controller.rb:6
+Completed 404 Not Found in 12ms (ActiveRecord: 7.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Planet with 'id'=random):
+  
+app/controllers/planet_controller.rb:6:in `show'
+Started GET "/planet/random" for ::1 at 2019-04-29 10:50:14 -0400
+Processing by PlanetController#show as HTML
+  Parameters: {"id"=>"random"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/planet_controller.rb:6
+Completed 404 Not Found in 6ms (ActiveRecord: 2.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Planet with 'id'=random):
+  
+app/controllers/planet_controller.rb:6:in `show'
+Started GET "/random" for ::1 at 2019-04-29 10:50:30 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/random"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/random" for ::1 at 2019-04-29 10:51:49 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/random"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/random" for ::1 at 2019-04-29 10:53:51 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for RandomController):
+  
+actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/random" for ::1 at 2019-04-29 10:54:14 -0400
+Processing by RandomController#index as HTML
+Completed 406 Not Acceptable in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (RandomController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.3) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.3) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/random" for ::1 at 2019-04-29 10:55:00 -0400
+Processing by RandomController#index as HTML
+  [1m[36mPlanet Load (0.4ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/random_controller.rb:3
+  Rendering random/index.html.erb within layouts/application
+  Rendered random/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 29ms (Views: 15.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/random" for ::1 at 2019-04-29 10:55:04 -0400
+Processing by RandomController#index as HTML
+  [1m[36mPlanet Load (0.9ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/random_controller.rb:3
+  Rendering random/index.html.erb within layouts/application
+  Rendered random/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 14.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/random" for ::1 at 2019-04-29 10:55:05 -0400
+Processing by RandomController#index as HTML
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/random_controller.rb:3
+  Rendering random/index.html.erb within layouts/application
+  Rendered random/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/random" for ::1 at 2019-04-29 10:55:06 -0400
+Processing by RandomController#index as HTML
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/random_controller.rb:3
+  Rendering random/index.html.erb within layouts/application
+  Rendered random/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 20.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/random" for ::1 at 2019-04-29 10:55:08 -0400
+Processing by RandomController#index as HTML
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/random_controller.rb:3
+  Rendering random/index.html.erb within layouts/application
+  Rendered random/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/random" for ::1 at 2019-04-29 10:55:48 -0400
+Processing by RandomController#index as HTML
+  [1m[36mPlanet Load (0.4ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/random_controller.rb:3
+  Rendering random/index.html.erb within layouts/application
+  Rendered random/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/random" for ::1 at 2019-04-29 10:55:49 -0400
+Processing by RandomController#index as HTML
+  [1m[36mPlanet Load (1.0ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/random_controller.rb:3
+  Rendering random/index.html.erb within layouts/application
+  Rendered random/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 15.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/random" for ::1 at 2019-04-29 10:55:50 -0400
+Processing by RandomController#index as HTML
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/random_controller.rb:3
+  Rendering random/index.html.erb within layouts/application
+  Rendered random/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/random" for ::1 at 2019-04-29 10:55:51 -0400
+Processing by RandomController#index as HTML
+  [1m[36mPlanet Load (0.6ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/random_controller.rb:3
+  Rendering random/index.html.erb within layouts/application
+  Rendered random/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 16.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/random" for ::1 at 2019-04-29 10:55:52 -0400
+Processing by RandomController#index as HTML
+  [1m[36mPlanet Load (0.4ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/random_controller.rb:3
+  Rendering random/index.html.erb within layouts/application
+  Rendered random/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 20ms (Views: 16.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/random" for ::1 at 2019-04-29 10:55:53 -0400
+Processing by RandomController#index as HTML
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/random_controller.rb:3
+  Rendering random/index.html.erb within layouts/application
+  Rendered random/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 36ms (Views: 33.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/model" for ::1 at 2019-04-29 11:04:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/model"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/moon/1" for ::1 at 2019-04-29 11:04:47 -0400
+Processing by MoonController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoon Load (0.5ms)[0m  [1m[34mSELECT  "moons".* FROM "moons" WHERE "moons"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/moon_controller.rb:6
+  Rendering moon/show.html.erb within layouts/application
+  Rendered moon/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 57ms (Views: 38.3ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/moon/1" for ::1 at 2019-04-29 11:04:57 -0400
+Processing by MoonController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoon Load (1.1ms)[0m  [1m[34mSELECT  "moons".* FROM "moons" WHERE "moons"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/moon_controller.rb:6
+  Rendering moon/show.html.erb within layouts/application
+  Rendered moon/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 42ms (Views: 38.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/moon/1" for ::1 at 2019-04-29 11:05:13 -0400
+Processing by MoonController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoon Load (1.0ms)[0m  [1m[34mSELECT  "moons".* FROM "moons" WHERE "moons"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/moon_controller.rb:6
+  Rendering moon/show.html.erb within layouts/application
+  Rendered moon/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 38ms (Views: 34.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/moon/1" for ::1 at 2019-04-29 11:05:21 -0400
+Processing by MoonController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoon Load (0.2ms)[0m  [1m[34mSELECT  "moons".* FROM "moons" WHERE "moons"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/moon_controller.rb:6
+  Rendering moon/show.html.erb within layouts/application
+  Rendered moon/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 57ms (Views: 55.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/moon/1" for ::1 at 2019-04-29 11:05:30 -0400
+Processing by MoonController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoon Load (1.2ms)[0m  [1m[34mSELECT  "moons".* FROM "moons" WHERE "moons"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/moon_controller.rb:6
+  Rendering moon/show.html.erb within layouts/application
+  Rendered moon/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 17.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/moon/1" for ::1 at 2019-04-29 11:05:49 -0400
+Processing by MoonController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoon Load (0.8ms)[0m  [1m[34mSELECT  "moons".* FROM "moons" WHERE "moons"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/moon_controller.rb:6
+  Rendering moon/show.html.erb within layouts/application
+  Rendered moon/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 40ms (Views: 36.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/moon/1" for ::1 at 2019-04-29 11:05:57 -0400
+Processing by MoonController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoon Load (1.3ms)[0m  [1m[34mSELECT  "moons".* FROM "moons" WHERE "moons"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/moon_controller.rb:6
+  Rendering moon/show.html.erb within layouts/application
+  Rendered moon/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 38ms (Views: 33.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/moon/1" for ::1 at 2019-04-29 11:06:28 -0400
+Processing by MoonController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoon Load (0.2ms)[0m  [1m[34mSELECT  "moons".* FROM "moons" WHERE "moons"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/moon_controller.rb:6
+  Rendering moon/show.html.erb within layouts/application
+  Rendered moon/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/moon/1" for ::1 at 2019-04-29 11:06:34 -0400
+Processing by MoonController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoon Load (0.3ms)[0m  [1m[34mSELECT  "moons".* FROM "moons" WHERE "moons"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/moon_controller.rb:6
+  Rendering moon/show.html.erb within layouts/application
+  Rendered moon/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 36ms (Views: 33.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/moon/1" for ::1 at 2019-04-29 11:07:09 -0400
+Processing by MoonController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoon Load (0.3ms)[0m  [1m[34mSELECT  "moons".* FROM "moons" WHERE "moons"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/moon_controller.rb:6
+  Rendering moon/show.html.erb within layouts/application
+  Rendered moon/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 37ms (Views: 33.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/moon/1" for ::1 at 2019-04-29 11:07:30 -0400
+Processing by MoonController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoon Load (0.3ms)[0m  [1m[34mSELECT  "moons".* FROM "moons" WHERE "moons"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/moon_controller.rb:6
+  Rendering moon/show.html.erb within layouts/application
+  Rendered moon/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 20.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/moon/1" for ::1 at 2019-04-29 11:07:33 -0400
+Processing by MoonController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoon Load (0.2ms)[0m  [1m[34mSELECT  "moons".* FROM "moons" WHERE "moons"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/moon_controller.rb:6
+  Rendering moon/show.html.erb within layouts/application
+  Rendered moon/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/moon/1" for ::1 at 2019-04-29 11:08:17 -0400
+Processing by MoonController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoon Load (0.3ms)[0m  [1m[34mSELECT  "moons".* FROM "moons" WHERE "moons"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/moon_controller.rb:6
+  Rendering moon/show.html.erb within layouts/application
+  Rendered moon/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 41ms (Views: 38.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/moon/1" for ::1 at 2019-04-29 11:08:26 -0400
+Processing by MoonController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoon Load (0.3ms)[0m  [1m[34mSELECT  "moons".* FROM "moons" WHERE "moons"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/moon_controller.rb:6
+  Rendering moon/show.html.erb within layouts/application
+  Rendered moon/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 45ms (Views: 41.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/moon/1" for ::1 at 2019-04-29 11:09:53 -0400
+Processing by MoonController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoon Load (0.5ms)[0m  [1m[34mSELECT  "moons".* FROM "moons" WHERE "moons"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/moon_controller.rb:6
+  Rendering moon/show.html.erb within layouts/application
+  Rendered moon/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/moon/1" for ::1 at 2019-04-29 11:10:03 -0400
+Processing by MoonController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoon Load (0.3ms)[0m  [1m[34mSELECT  "moons".* FROM "moons" WHERE "moons"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/moon_controller.rb:6
+  Rendering moon/show.html.erb within layouts/application
+  Rendered moon/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 51ms (Views: 48.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/moon/1" for ::1 at 2019-04-29 11:10:13 -0400
+Processing by MoonController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoon Load (1.1ms)[0m  [1m[34mSELECT  "moons".* FROM "moons" WHERE "moons"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/moon_controller.rb:6
+  Rendering moon/show.html.erb within layouts/application
+  Rendered moon/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 41ms (Views: 36.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/moon/1" for ::1 at 2019-04-29 11:10:19 -0400
+Processing by MoonController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoon Load (0.3ms)[0m  [1m[34mSELECT  "moons".* FROM "moons" WHERE "moons"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/moon_controller.rb:6
+  Rendering moon/show.html.erb within layouts/application
+  Rendered moon/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 37ms (Views: 32.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/moon" for ::1 at 2019-04-29 11:10:55 -0400
+Processing by MoonController#index as HTML
+  Rendering moon/index.html.erb within layouts/application
+  [1m[36mMoon Load (0.4ms)[0m  [1m[34mSELECT "moons".* FROM "moons"[0m
+  ↳ app/views/moon/index.html.erb:3
+  Rendered moon/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 23ms (Views: 19.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/moon" for ::1 at 2019-04-29 11:11:08 -0400
+Processing by MoonController#index as HTML
+  Rendering moon/index.html.erb within layouts/application
+  [1m[36mMoon Load (0.3ms)[0m  [1m[34mSELECT "moons".* FROM "moons"[0m
+  ↳ app/views/moon/index.html.erb:3
+  Rendered moon/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/moon" for ::1 at 2019-04-29 11:11:19 -0400
+Processing by MoonController#index as HTML
+  Rendering moon/index.html.erb within layouts/application
+  [1m[36mMoon Load (0.3ms)[0m  [1m[34mSELECT "moons".* FROM "moons"[0m
+  ↳ app/views/moon/index.html.erb:3
+  Rendered moon/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 53ms (Views: 51.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/moon" for ::1 at 2019-04-29 11:11:46 -0400
+Processing by MoonController#index as HTML
+  Rendering moon/index.html.erb within layouts/application
+  [1m[36mMoon Load (0.3ms)[0m  [1m[34mSELECT "moons".* FROM "moons"[0m
+  ↳ app/views/moon/index.html.erb:3
+  Rendered moon/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 39ms (Views: 37.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/moon" for ::1 at 2019-04-29 11:12:03 -0400
+Processing by MoonController#index as HTML
+  Rendering moon/index.html.erb within layouts/application
+  [1m[36mMoon Load (0.6ms)[0m  [1m[34mSELECT "moons".* FROM "moons"[0m
+  ↳ app/views/moon/index.html.erb:3
+  Rendered moon/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 50ms (Views: 47.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/moon" for ::1 at 2019-04-29 11:13:03 -0400
+Processing by MoonController#index as HTML
+  Rendering moon/index.html.erb within layouts/application
+  [1m[36mMoon Load (0.8ms)[0m  [1m[34mSELECT "moons".* FROM "moons"[0m
+  ↳ app/views/moon/index.html.erb:3
+  Rendered moon/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 41ms (Views: 38.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/moon" for ::1 at 2019-04-29 11:13:20 -0400
+Processing by MoonController#index as HTML
+  Rendering moon/index.html.erb within layouts/application
+  [1m[36mMoon Load (0.4ms)[0m  [1m[34mSELECT "moons".* FROM "moons"[0m
+  ↳ app/views/moon/index.html.erb:3
+  Rendered moon/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 43ms (Views: 40.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/moon" for ::1 at 2019-04-29 11:14:47 -0400
+Processing by MoonController#index as HTML
+  Rendering moon/index.html.erb within layouts/application
+  [1m[36mMoon Load (0.4ms)[0m  [1m[34mSELECT "moons".* FROM "moons"[0m
+  ↳ app/views/moon/index.html.erb:3
+  Rendered moon/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 41ms (Views: 38.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/moon" for ::1 at 2019-04-29 11:14:54 -0400
+Processing by MoonController#index as HTML
+  Rendering moon/index.html.erb within layouts/application
+  [1m[36mMoon Load (0.4ms)[0m  [1m[34mSELECT "moons".* FROM "moons"[0m
+  ↳ app/views/moon/index.html.erb:3
+  Rendered moon/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/planet" for ::1 at 2019-04-29 11:15:49 -0400
+Processing by PlanetController#index as HTML
+  Rendering planet/index.html.erb within layouts/application
+  [1m[36mPlanet Load (1.7ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planet/index.html.erb:3
+  Rendered planet/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 47ms (Views: 44.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/planet" for ::1 at 2019-04-29 11:16:08 -0400
+Processing by PlanetController#index as HTML
+  Rendering planet/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.4ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planet/index.html.erb:3
+  Rendered planet/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 55ms (Views: 52.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/planet" for ::1 at 2019-04-29 11:16:30 -0400
+Processing by PlanetController#index as HTML
+  Rendering planet/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.4ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planet/index.html.erb:3
+  Rendered planet/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 61ms (Views: 58.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/planet" for ::1 at 2019-04-29 11:17:27 -0400
+Processing by PlanetController#index as HTML
+  Rendering planet/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planet/index.html.erb:3
+  Rendered planet/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 48ms (Views: 46.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/planet" for ::1 at 2019-04-29 11:17:34 -0400
+Processing by PlanetController#index as HTML
+  Rendering planet/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planet/index.html.erb:3
+  Rendered planet/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/planet" for ::1 at 2019-04-29 11:17:47 -0400
+Processing by PlanetController#index as HTML
+  Rendering planet/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.8ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planet/index.html.erb:3
+  Rendered planet/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 47ms (Views: 44.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/planet/1" for ::1 at 2019-04-29 11:18:29 -0400
+Processing by PlanetController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (0.4ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planet_controller.rb:6
+  Rendering planet/show.html.erb within layouts/application
+  Rendered planet/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 18.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/planet/1" for ::1 at 2019-04-29 11:19:14 -0400
+Processing by PlanetController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planet_controller.rb:6
+  Rendering planet/show.html.erb within layouts/application
+  Rendered planet/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 56ms (Views: 51.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/planet/1" for ::1 at 2019-04-29 11:20:11 -0400
+Processing by PlanetController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (2.2ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planet_controller.rb:6
+  Rendering planet/show.html.erb within layouts/application
+  Rendered planet/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 45ms (Views: 39.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/planet/1" for ::1 at 2019-04-29 11:20:18 -0400
+Processing by PlanetController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (0.9ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planet_controller.rb:6
+  Rendering planet/show.html.erb within layouts/application
+  Rendered planet/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 40ms (Views: 35.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/planet" for ::1 at 2019-04-29 11:20:55 -0400
+Processing by PlanetController#index as HTML
+  Rendering planet/index.html.erb within layouts/application
+  [1m[36mPlanet Load (1.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planet/index.html.erb:3
+  Rendered planet/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 59ms (Views: 56.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/random" for ::1 at 2019-04-29 11:20:57 -0400
+Processing by RandomController#index as HTML
+  [1m[36mPlanet Load (0.4ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/random_controller.rb:3
+  Rendering random/index.html.erb within layouts/application
+  Rendered random/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/random" for ::1 at 2019-04-29 11:21:26 -0400
+Processing by RandomController#index as HTML
+  [1m[36mPlanet Load (0.4ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/random_controller.rb:3
+  Rendering random/index.html.erb within layouts/application
+  Rendered random/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 57ms (Views: 53.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/random" for ::1 at 2019-04-29 11:22:16 -0400
+Processing by RandomController#index as HTML
+  [1m[36mPlanet Load (0.7ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/random_controller.rb:3
+  Rendering random/index.html.erb within layouts/application
+  Rendered random/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 39ms (Views: 35.0ms | ActiveRecord: 0.7ms)
+
+

@@ -2,7 +2,7 @@
 <table>
     <% @planets.each do |planet| %>
         <tr>
-            <td><%= planet.name %></td>
+            <td id ='planetName'><%= planet.name %></td>
             <td><%= planet.distance_from_sun %></td>
             <td><%= planet.diameter%></td>
             <td><%= planet.orbit_period %></td>

@@ -2,7 +2,7 @@
 <table>
     <% @moons.each do |moon| %>
         <tr>
-            <td><%= moon.name %></td>
+            <td id ='moonName'><%= moon.name %></td>
             <td><%= moon.distance_from_planet %></td>
             <td><%= moon.radius%></td>
             <td><%= moon.orbit_period %></td>
