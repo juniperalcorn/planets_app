@@ -1,0 +1,7 @@
+<h1><%= @moon.name %></h1>
+
+<p>Distance from planet: <%= @moon.distance_from_planet %></p>
+<p>Radius: <%= @moon.radius%></p>
+<p>Orbit Period: <%= @moon.orbit_period %></p>
+<p>Planet: <span id='moonToPlanet'><%= @moon.planet %><span></p>
+<p id='moonLink'><%= link_to 'Back', moon_index_path %></p>

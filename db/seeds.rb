@@ -1,3 +1,10 @@
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+#
+# Examples:
+#
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
 planets = {
   mercury: {
     name: "Mercury",
@@ -48,6 +55,15 @@ planets = {
     orbit_period: "164.8 years",
   }
 }
+
+planets.each do |key, value|
+  Planet.create!({
+    name: value[:name],
+    distance_from_sun: value[:distance_from_sun],
+    diameter: value[:diameter],
+    orbit_period: value[:orbit_period]
+  })
+end
 
 moons = {
   luna: {
@@ -100,3 +116,14 @@ moons = {
     planet: "Uranus"
   }
 }
+
+moons.each do |key, value|
+  planet = Planet.where(name: value[:planet]).first
+  Moon.create!({
+    name: value[:name],
+    distance_from_planet: value[:distance_from_planet],
+    radius: value[:radius],
+    orbit_period: value[:orbit_period],
+    planet: value[:planet]
+  })
+end
